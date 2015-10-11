@@ -140,33 +140,8 @@ view.element
 When an element is created, defined events can be added to it. When a view is
 destroyed, these event handlers are then removed.
 
-```ruby
-class ButtonView < Praha::View
-  on :click do |evt|
-    puts "clicked on button"
-  end
+In Praha, event listening is done directly in the haml
 
-  def tag_name
-    :button
-  end
-end
-```
-
-For complex views, you can provide an optional css selector to scope the events:
-
-```ruby
-class NavigationView < Praha::View
-  on :click, 'ul.navbar li' do |evt|
-    puts "clicked: #{evt.target}"
-  end
-
-  on :mouseover, 'ul.navbar li.selected', :handle_mouseover
-
-  def handle_mouseover(evt)
-    # ...
-  end
-end
-```
 
 As you can see, you can specify a method to handle events instead of a block.
 
