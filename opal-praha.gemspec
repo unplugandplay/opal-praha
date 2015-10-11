@@ -5,9 +5,9 @@ require 'opal/praha/version'
 Gem::Specification.new do |s|
   s.name         = 'opal-praha'
   s.version      = Opal::Praha::VERSION
-  s.author       = 'Adam Beynon'
-  s.email        = 'adam.beynon@gmail.com'
-  s.homepage     = 'http://opalrb.org'
+  s.author       = ‘Jocelyn RICHARD’
+  s.email        = ‘unplugandplay@free.fr’
+  s.homepage     = 'http://diffusions.mobi'
   s.summary      = 'Client side MVC framework for Opal'
   s.description  = 'Client side MVC framework for Opal'
   s.license      = 'MIT'
