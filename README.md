@@ -1,16 +1,12 @@
 # Praha: Client side MVC framework for Opal
 
-[![Build Status](https://travis-ci.org/opal/praha.png?branch=master)](https://travis-ci.org/opal/praha)
 
-Until a better README is out (shame on us) you can take a look at
-the [Opal implementation](https://github.com/opal/opal-todos)
-of [TodoMVC](http://todomvc.com).
+Next step: the release of THE [TodoMVC](http://todomvc.com) implementation.
 
 ## Installation
 
-Add praha to your ```Gemfile``` with a reference to the Github source.
+Add opal-praha to your ```Gemfile``` with a reference to the Github source.
 
-Note: The praha hosted on rubygems.org is a different project.
 
 ```ruby
 gem 'opal-praha'
@@ -140,10 +136,17 @@ view.element
 When an element is created, defined events can be added to it. When a view is
 destroyed, these event handlers are then removed.
 
-In Praha, event listening is done directly in the haml
+In Praha, event listening is done directly in the HTML or HAML
+```haml
+.view
+  %input.toggle(opal-click){type: "checkbox", checked: @todo.completed}
+  %label.editable(opal-dblclick)= @todo.title
+  %button.destroy(opal-click)
+.form
+  %input.edit(opal-focusout="finish_editing" opal-press-enter="finish_editing"){value: @todo.title}
 
+```
 
-As you can see, you can specify a method to handle events instead of a block.
 
 ### Customizing element creation
 
